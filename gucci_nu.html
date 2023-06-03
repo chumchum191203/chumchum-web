@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/34fc0a3bbd.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="responsive.css">
+    <title>Shop</title>
+    <style>
+        .table-body{
+            opacity: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Start Header (NavBar + Logo) -->
+    <div id="header" class="row fixed-top-header">
+        <!-- Start: Navbar -->
+        <div class="navbar">
+            <ul class="menu">
+                <a style="padding:0 50px" href="index.html"> <img src="logo.png" width="100"
+                        height="60"></a>
+                <li><a href="index.html">HOME</a></li>
+                <li><a class="filter" href="shop-page.html" data-filter="all">SHOP</a>
+                </li>
+                <!-- Logo -->
+                
+                <li><a href="about-us.html">ABOUT US</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li class="cart">
+                    <a href="cart.html" id="cart-shop">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+                <li><a href="#" id="member">MEMBER</a></li>
+            </ul>
+        </div>
+        <!-- End: Navbar -->
+    </div>
+    <!-- End: Header -->
+
+    
+
+    <!-- Start: Responsive Nav -->
+<div class="row rs-nav" style="background-color: #ffe5d8;">
+    <div class="col-xs-12 col-sm-12">
+        <div class="pull-left">
+            <span onclick="openNav()" class="glyphicon glyphicon-menu-hamburger"></span>
+        </div>
+
+        <a href="index.html">
+            <img class="left-logo" src="logo.png">
+        </a>
+
+        <div class="pull-right">
+            <a href="cart.html" class="glyphicon glyphicon-shopping-cart"></a>
+        </div>
+    </div>
+</div>
+
+    <!-- Hidden: Nav -->
+    <div id="mySidenav" class="side-nav pull-left">
+        <img style="margin-bottom: 10px" src="logo.png">
+        <hr>
+        <a href="index.html">Home</a>
+        <a href="shop-page.html">Shop</a>
+        <a href="about-us.html">About Us</a>
+        <hr>
+        <a href="contact.html">Contact</a>
+        <a href="#" id="sidemember">Member</a>
+        <hr>
+        <div class="closeX pointer-cursor">
+            <p class="closebtn ti-close" onclick="closeNav()">
+            <p>
+        </div>
+    </div>
+    <!-- End: Responsive Nav -->
+<!-- Fixed Filter-Button -->
+    <div class="filter-wrapper" onclick="openFilter()">
+        <div style="font-weight: 700;" class="ti-filter"></div>
+    </div>
+    <!-- Hidden Filter-Slideup -->
+    <div id="myFilter" class="filter-popup row">
+        <div class="inner-popup">
+            <div class="filter-header container">
+                <p class="pull-left ti-filter"></p>
+                <i onclick="closeFilter()" class="ti-close pull-right"></i>
+            </div>
+            <form action="">
+            <ul class="brand-filter container">
+                <h3 style="color: white; letter-spacing: 1.5px; font-weight: 350; border-top: 1px solid white; border-bottom: 1px solid white; padding: 10px 0;" class="text-center">Brand</h3>
+                <div class="">
+                    <h4 style="border-left: 3px solid lightpink; color: white; background-color: grey; padding: 5px" class="">Dior</h4>
+                    <div style="border-left: grey 5px solid;" class="container">
+                        <label style="color: white" for="">
+                           Nam <input type="checkbox" name="" value="Nam" id="chk-brand">
+                        </label>
+                        &nbsp
+                        <label style="color: white" for="">
+                            Nu <input type="checkbox" name="" value="Nu" id="chk-brand">
+                        </label>
+                        &nbsp
+                        <label style="color: white" for="">
+                            Unisex <input type="checkbox" name="" value="Unisex" id="chk-brand">
+                        </label>
+                    </div>
+                </div>
+                <div class="">
+                    <h4 style="border-left: 3px solid lightpink; color: white; background-color: grey; padding: 5px" class="">Versace</h4>
+                    <div style="border-left: grey 5px solid;" class="container">
+                        <label style="color: white" for="">
+                           Nam <input type="checkbox" name="" value="Nam" id="chk-brand">
+                        </label>
+                        &nbsp
+                        <label style="color: white" for="">
+                            Nu <input type="checkbox" name="" value="Nu" id="chk-brand">
+                        </label>
+                        &nbsp
+                        <label style="color: white" for="">
+                            Unisex <input type="checkbox" name="" value="Unisex" id="chk-brand">
+                        </label>
+                    </div>
+                </div><div class="">
+                    <h4 style="border-left: 3px solid lightpink; color: white; background-color: grey; padding: 5px" class="">Calvin Klein</h4>
+                    <div style="border-left: grey 5px solid;" class="container">
+                        <label style="color: white" for="">
+                           Nam <input type="checkbox" name="" value="Nam" id="chk-brand">
+                        </label>
+                        &nbsp
+                        <label style="color: white" for="">
+                            Nu <input type="checkbox" name="" value="Nu" id="chk-brand">
+                        </label>
+                        &nbsp
+                        <label style="color: white" for="">
+                            Unisex <input type="checkbox" name="" value="Unisex" id="chk-brand">
+                        </label>
+                    </div>
+                </div><div class="">
+                    <h4 style="border-left: 3px solid lightpink; color: white; background-color: grey; padding: 5px" class="">Chanel</h4>
+                    <div style="border-left: grey 5px solid;" class="container">
+                        <label style="color: white" for="">
+                           Nam <input type="checkbox" name="" value="Nam" id="chk-brand">
+                        </label>
+                        &nbsp
+                        <label style="color: white" for="">
+                            Nu <input type="checkbox" name="" value="Nu" id="chk-brand">
+                        </label>
+                        &nbsp
+                        <label style="color: white" for="">
+                            Unisex <input type="checkbox" name="" value="Unisex" id="chk-brand">
+                        </label>
+                    </div>
+                </div><div class="">
+                    <h4 style="border-left: 3px solid lightpink; color: white; background-color: grey; padding: 5px" class="">Gucci</h4>
+                    <div style="border-left: grey 5px solid;" class="container">
+                        <label style="color: white" for="">
+                           Nam <input type="checkbox" name="" value="Nam" id="chk-brand">
+                        </label>
+                        &nbsp
+                        <label style="color: white" for="">
+                            Nu <input type="checkbox" name="" value="Nu" id="chk-brand">
+                        </label>
+                        &nbsp
+                        <label style="color: white" for="">
+                            Unisex <input type="checkbox" name="" value="Unisex" id="chk-brand">
+                        </label>
+                    </div>
+                </div>
+            </ul>
+            <hr>
+            <div class="button-group container text-center">
+ 
+                
+                <span onclick="closeFilter()" class="pointer-cursor">Close</span>
+            </div>
+            </form>
+        </div>
+    </div>
+    <!-- End: Hidden Filter-Slideup -->
+<!-- End: Fixed Filter-Button -->
+
+<div class="product-header text-center container-fluid">
+    <p>PRODUCT</p>
+</div>
+
+<!-- START DATA JSON PRODUCT -->
+    <div id="filter-data" class="filter-section container-fluid">
+
+        <!--Start: Cột Filter -->
+        <div class=" col-sm-4 col-md-4 col-lg-3">
+            <div class="slide-box" id="filter_button">
+
+                <div class="vertical-menu">
+                    <ul>
+                        <li><a href="shop-page.html" class="filter" data-filter="all">All</a></li>
+                        <!-- Dior Item -->
+                        <li class='sub-menu'><a class="filter" data-filter="Dior" href='#Dior'>Dior<div
+                                    class='fa fa-caret-down right'></div></a>
+                            <ul>
+                                <li><a href="dior_nam.html"class="filter-brand pdbrand" data-filter="Nam">Nam</a></li>
+                                <li><a href="dior_nu.html" class="filter-brand pdbrand" data-filter="Nữ">Nữ</a></li>
+                                <li><a href="dior_uni.html"class="filter-brand pdbrand" data-filter="Unisex">Unisex</a></li>
+                            </ul>
+                        </li>
+                        <!-- Versace Item -->
+                        <li class='sub-menu'><a class="filter" data-filter="Versace" href='#Versace'>Versace<div
+                                    class='fa fa-caret-down right'></div></a>
+                            <ul>
+                                <li><a href="ver_nam.html" class="filter-brand pdbrand" data-filter="Nam">Nam</a></li>
+                                <li><a href="ver_nu.html" class="filter-brand pdbrand" data-filter="Nữ">Nữ</a></li>
+                                <li><a href="ver_uni.html" class="filter-brand pdbrand" data-filter="Unisex">Unisex</a></li>
+                            </ul>
+                        </li>
+                        <!-- Cakvin Klein Item -->
+                        <li class='sub-menu'><a class="filter" data-filter="Calvin Klein" href='#Calvin Klein'>Calvin Klein<div
+                                    class='fa fa-caret-down right'></div></a>
+                            <ul>
+                                <li><a href="ck_nam.html" class="filter-brand pdbrand" data-filter="Nam">Nam</a></li>
+                                <li><a href="ck_nu.html" class="filter-brand pdbrand" data-filter="Nữ">Nữ</a></li>
+                                <li><a href="ck_uni.html" class="filter-brand pdbrand" data-filter="Unisex">Unisex</a></li>
+                            </ul>
+                        </li>
+                        <!-- Chanel Item -->
+                        <li class='sub-menu'><a class="filter" data-filter="Chanel" href='#Chanel'>Chanel<div
+                                    class='fa fa-caret-down right'></div></a>
+                            <ul>
+                                <li><a href="chanel_nam.html" class="filter-brand pdbrand" data-filter="Nam">Nam</a></li>
+                                <li><a href="chanel_nu.html" class="filter-brand pdbrand" data-filter="Nữ">Nữ</a></li>
+                                <li><a href="chanel_uni.html" class="filter-brand pdbrand" data-filter="Unisex">Unisex</a></li>
+                            </ul>
+                        </li>
+                        <!-- Gucci Item -->
+                        <li class='sub-menu'><a class="filter" data-filter="Gucci" href='#Gucci'>Gucci<div class='fa fa-caret-down right'></div></a>
+                            <ul>
+                                <li><a href="gucci_nam.html" class="filter-brand pdbrand" data-filter="Nam">Nam</a></li>
+                                <li><a href="gucci_nu.html" class="filter-brand pdbrand" data-filter="Nữ">Nữ</a></li>
+                                <li><a href="gucci_uni.html" class="filter-brand pdbrand" data-filter="Unisex">Unisex</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Start: Cột sản phẩm -->
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9">
+            <!-- Khối chứa thông tin sản phẩm -->
+            <div class="product-layout" id="products">
+                <div class="margin col-xs-6 col-sm-4 col-md-4">
+                    <div class="menu-item">
+                        <a href="#"><img src="gucci_nu.jpg" width="100%"></a>
+                        <span class="product-item-percent-off">
+                            <span>13%</span>
+                            <br>
+                            <span>OFF</span>
+                        </span>
+                        <div class="detail-item">
+                            <h4>Nước Hoa Nữ Gucci Flora Gorgeous Gardenia 50ml</h4>
+                                <i style="color: #FFBC59;" class="fa-solid fa-star"></i>
+                                <i style="color: #FFBC59;" class="fa-solid fa-star"></i>
+                                <i style="color: #FFBC59;" class="fa-solid fa-star"></i>
+                                <i style="color: #FFBC59;" class="fa-solid fa-star"></i>
+                                <i style="color: #FFBC59;" class="fa-solid fa-star"></i>
+                                <i style="color: black; font-size: 17px;">(143)</i>
+                            <div class="price">
+                                <h5 style="font-size: 25px; font-weight: bold; font-style: italic; color: red;">2.450.000 đ </h5>
+                                <h5 style="font-size: 20px; text-decoration: line-through; font-style: italic; color:gray;">2.800.000 đ</h5>
+                            </div>                          
+                            <p>Chi tiết</p>
+                            <p>Mua Ngay</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: Cột sản phẩm -->
+
+        <!-- Modal Temporary -->
+        <div class="modal fade" id="showModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- div.modal-body include json data -->
+                    <div class="modal-body modal-item">
+
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- END DATA PRODUCT -->
+
+    <!--Start: Preview Panel-->
+    <div id="id00" class="panel-body row bg-light-pink comparePanle w3-margin-top">
+
+        <!--Start: Header -->
+        <div class="row w3-margin-top preview-header-panel">
+
+            <div class="container">
+                <a onclick="document.getElementById('id00').style.display='none'"
+                    class="glyphicon glyphicon-remove-circle modal-closeBtn1 pointer-cursor closeBtn"></a>
+            </div>
+            <p>Added Products for Comparison</p>
+        </div>
+        <!-- End: Header -->
+
+        <!--Start: Added Product Row (Javascript) -->
+        <div class="row titleMargin comparePan">
+        </div>
+        <!-- End: Added Product Row (Javascript) -->
+
+        <!-- Start: Compare Button -->
+        <div class="row w3-margin-bottom">
+            <button class="btn cmprBtn" disabled>Compare Products</button>
+        </div>
+
+        <!-- End: Compare Button -->
+    </div>
+    <!--End: Preview panel-->
+
+    <!-- comparision popup-->
+    <div id="id01" class="w3-animate-zoom w3-modal modPos">
+
+        <div class="row contentPop w3-margin-top">
+            <div class="comparision-header text-center w3-margin-bottom">
+            </div>
+
+        </div>
+
+        <a onclick="document.getElementById('id01').style.display='none'"
+            class="glyphicon glyphicon-remove-circle modal-closeBtn pointer-cursor closeBtn"></a>
+
+    </div>
+    <!--end of comparision popup-->
+
+    <!-- Start: Footer -->
+<div class="row footer">
+    
+    <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="logo.png" width="100" height="60">
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="contact">
+                <p style="font-size: 20px">140 Lê Trọng Tấn, Tây Thạnh, Tân Phú, Thành phố Hồ Chí Minh, Việt Nam</p>
+                <p style="font-size: 20px;">thanhtrung1819@gmail.com</p> 
+                <p style="font-size: 20px;">096 346 2301 </p>
+                
+            </div>
+            <!-- Social Media -->
+            <div class="social-icons">
+                <div class="icons">
+                    <a href="#"><span class="fa-icon fa fa-facebook"></span></a>
+                </div>
+    
+                <div class="icons">
+                    <a href="#"><span class="fa-icon fa fa-instagram"></span></a>
+                </div>
+    
+                <div class="icons">
+                    <a href="#"><span class="fa-icon fa fa-twitter"></span></a>
+                </div>
+            </div>
+    
+            <div class="copyright text-center">
+                <h4 style="font-weight: 200;">Copyright &copy 2023 by 2001216256_Nguyễn_Thành_Trung.</h4>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- End: Footer -->
+
+    <!-- Modal Member -->
+    <div class="modal fade" id="memberModal" role="dialog">
+        <div class="modal-dialog modal-lg row">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header text-center" style="padding:35px 50px; background: #ffe5d8">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 style="letter-spacing: 1.5px;">MEMBERSHIP</h4>
+                </div>
+
+                <!--Start: Modal Body -->
+                <!-- Left-Body -->
+                <div class="modal-body col-xs-12 col-sm-6 col-md-6" style="padding:40px 50px; background: #f4f9ff">
+                    <div class="text-center modal-header">
+                        <h3>Log in </h3>
+                    </div>
+
+                    <form role="form" class="margin">
+
+                        <div class="form-group">
+                            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Email</label>
+                            <input type="email" onfocus="show(this)" onblur="hide(this)" class="form-control"
+                                id="usremail" placeholder="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                            <input type="password" onfocus="show(this)" onblur="hide(this)" class="form-control"
+                                id="psw" placeholder="">
+                        </div>
+
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>Remember me</label>
+                        </div>
+
+                        <button type="submit" class="login-btn btn btn-block">Login</button>
+                    </form>
+
+                </div>
+                <!-- Right-Body -->
+                <div class="modal-body col-xs-12 col-sm-6 col-md-6 bg-member" style="padding:40px 50px;">
+                    <div class="text-center modal-header">
+                        <h3>Log in with</h3>
+                    </div>
+
+                    <div class="social-platform margin">
+                        <ul class="social-list">
+                            <li><a href="#facebook"><i class="fb fa-icon fa fa-facebook-f"></i></a></li>
+                            <li><a href="#twitter"><i class="twt fa-icon fa fa-twitter"></i></a></li>
+                            <li><a href="#google"><i class="gg fa-icon fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- End: Modal Body -->
+            </div>
+        </div>
+    </div>
+    <!-- End: Modal -->
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
